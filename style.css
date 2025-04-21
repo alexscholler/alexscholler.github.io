@@ -56,13 +56,11 @@ body.dark-mode {
   flex: 1;
   padding: 40px;
 }
-.parallax-section {
+.hero-section {
   text-align: center;
-  padding: 60px 20px;
-  background: url('images/parallax-background.jpg') no-repeat center center fixed;
-  background-size: contain; /* set to "cover" if not working*/
+  padding: 80px 20px 60px;
+  background-color: #1a1a1a; /* or light color if not in dark mode */
   color: white;
-  text-shadow: 0 0 10px black;
 }
 .profile-photo {
   width: 150px;
