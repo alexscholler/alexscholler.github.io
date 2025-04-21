@@ -60,7 +60,7 @@ body.dark-mode {
   text-align: center;
   padding: 60px 20px;
   background: url('images/parallax-background.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-size: contain; /* set to "cover" if not working*/
   color: white;
   text-shadow: 0 0 10px black;
 }
@@ -71,7 +71,7 @@ body.dark-mode {
   margin-bottom: 20px;
 }
 .content-section, .projects-section, .contact-section {
-  background: rgba(0, 0, 0, 0);  /* change to 0.5 for semi-transparent black.  */
+  background: rgba(0, 0, 0, 0.01);  /* change to 0.5 for semi-transparent black.  */
   color: white;
   border-radius: 10px;
   padding: 40px;
