@@ -108,6 +108,15 @@
         if (top < windowHeight - 100) {
           el.classList.add("active");
         }
+      const backToTop = document.getElementById("back-to-top");
+        if (
+    window.scrollY > 300 &&
+    document.getElementById("main-content").style.display === "block"
+  ) {
+    backToTop.style.display = "block";
+  } else {
+    backToTop.style.display = "none";
+  }
       });
 
       const backToTop = document.getElementById("back-to-top");
