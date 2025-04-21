@@ -110,6 +110,9 @@ nav.dark-mode {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
+.parallax-section {
+  background-image: url('images/parallax-background.jpg');
+}
 #back-to-top {
   position: fixed;
   bottom: 20px;
