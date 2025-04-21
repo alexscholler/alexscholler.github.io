@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alexandru Scholler | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <div id="captcha-gate" class="captcha-gate">
+    <h2>Please verify you're human to continue</h2>
+    <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY" data-callback="captchaVerified"></div>
+  </div>
+
+  <div id="main-content" style="display: none;">
+    <nav id="navbar">
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div><div></div><div></div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="toggle-dark" onclick="toggleDarkMode()">🌓</button>
+    </nav>
+
+    <section class="parallax-section">
+      <div class="reveal">
+        <img src="images/your-photo.jpg" alt="Alexandru Scholler" class="profile-photo">
+        <h1>Hi, I'm Alexandru Scholler</h1>
+        <p>Software Engineer | Creative Problem Solver | AI Enthusiast</p>
+      </div>
+    </section>
+
+    <section id="about" class="content-section reveal">
+      <h2>About Me</h2>
+      <p>I’m <strong>Alexandru Scholler</strong>, a passionate software engineer with a First-Class Honours degree from the University of Bolton. I build intelligent and scalable solutions using languages and tools like Python, Java, C#, JavaScript, React, and .NET.</p>
+      <p>I’ve developed AI models, full-stack applications, and interactive user experiences. I love working with Agile teams and continuously learning new technologies. My background also includes client support roles where I sharpened communication and problem-solving skills.</p>
+      <p>Explore my projects and reach out if you'd like to collaborate! <a href="mailto:scholleralexandrucristian@yahoo.com" target="_blank">Let's connect</a>.</p>
+    </section>
+
+    <section id="projects" class="projects-section reveal">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <a class="project-tile" href="https://github.com/axvampire/stock-price-predictor" target="_blank">Stock Price Predictor</a>
+        <a class="project-tile" href="https://github.com/axvampire/ai-resume-analyzer" target="_blank">AI Resume Analyzer</a>
+        <a class="project-tile" href="https://github.com/axvampire/weather-app" target="_blank">Weather App</a>
+        <a class="project-tile" href="https://github.com/axvampire/hotel_booking_manipulate_and_visualize_data" target="_blank">Hotel Booking Data Visualization</a>
+        <a class="project-tile" href="https://github.com/axvampire/netflix-content-analysis" target="_blank">Netflix Content Analysis</a>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section reveal">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xpwdarky" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <div class="g-recaptcha" data-sitekey="6Lf_cB8rAAAAAA4P3EKH5erE3MfBQL5PzQkT-8sr"></div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <button id="back-to-top" onclick="scrollToTop()">↑</button>
+
+  <script>
+    function captchaVerified() {
+      document.getElementById("captcha-gate").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    }
+
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function toggleDarkMode() {
+      const body = document.body;
+      const nav = document.getElementById("navbar");
+      body.classList.toggle("dark-mode");
+      nav.classList.toggle("dark-mode");
+      localStorage.setItem("darkMode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("navbar").classList.add("dark-mode");
+      }
+    });
+
+    window.addEventListener("scroll", function () {
+      const reveals = document.querySelectorAll(".reveal");
+      reveals.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (top < windowHeight - 100) {
+          el.classList.add("active");
+        }
+      });
+
+      const backToTop = document.getElementById("back-to-top");
+      if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>

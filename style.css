@@ -1,0 +1,132 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  transition: background 0.4s ease;
+}
+nav.dark-mode {
+  background: rgba(20, 20, 20, 0.95);
+}
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.dark-mode .nav-links a {
+  color: #80d0ff;
+}
+.toggle-dark {
+  cursor: pointer;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #007acc;
+  transition: transform 0.3s ease;
+}
+.toggle-dark:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+.dark-mode .toggle-dark {
+  color: #80d0ff;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: #007acc;
+  margin: 4px 0;
+}
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  nav.dark-mode .nav-links {
+    background: #1f1f1f;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.project-tile {
+  background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: translateY(0);
+}
+.project-tile:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+#back-to-top:hover {
+  background: #005f99;
+}
