@@ -71,7 +71,7 @@ body.dark-mode {
   margin-bottom: 20px;
 }
 .content-section, .projects-section, .contact-section {
-  background: rgba(0, 0, 0, 0.5);  /* semi-transparent black */
+  background: rgba(0, 0, 0, 0);  /* change to 0.5 for semi-transparent black.  */
   color: white;
   border-radius: 10px;
   padding: 40px;
