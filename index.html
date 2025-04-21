@@ -91,12 +91,11 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    window.addEventListener("DOMContentLoaded", () => {
-      if (localStorage.getItem("darkMode") === "enabled") {
-        document.body.classList.add("dark-mode");
-        document.getElementById("navbar").classList.add("dark-mode");
-      }
-    });
+window.addEventListener("DOMContentLoaded", () => {
+  document.body.classList.add("dark-mode");
+  localStorage.setItem("darkMode", "enabled");
+});
+
 
     window.addEventListener("scroll", function () {
       const reveals = document.querySelectorAll(".reveal");
