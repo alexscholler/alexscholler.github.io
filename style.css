@@ -119,10 +119,33 @@ form button:hover {
     justify-content: space-between;
     align-items: center;
   }
-  .sidebar nav {
-    flex-direction: row;
-    gap: 15px;
-  }
+.sidebar nav a {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #007acc;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebar nav a:hover {
+  background-color: rgba(0, 122, 204, 0.1);
+  color: #005f99;
+}
+  body.dark-mode .sidebar nav a {
+  color: #80d0ff;
+}
+
+body.dark-mode .sidebar nav a:hover {
+  background-color: rgba(128, 208, 255, 0.1);
+  color: #66c1ff;
+}
+
+
 #back-to-top {
   position: fixed;
   bottom: 10px;
