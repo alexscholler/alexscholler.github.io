@@ -10,12 +10,12 @@
 </head>
 <body>
   <body>
-  <div id="captcha-gate" class="captcha-gate">
+  <div id="captcha-gate" class="captcha-gate" style="display: flex;">
     <h2>Please verify you're human to continue</h2>
     <div class="g-recaptcha" data-sitekey="6Lf_cB8rAAAAAA4P3EKH5erE3MfBQL5PzQkT-8sr" data-callback="captchaVerified"></div>
   </div>
 
-  <div id="main-content" style="display: block;">
+  <div id="main-content" style="display: none;">
     <nav id="navbar">
       <div class="hamburger" onclick="toggleMenu()">
         <div></div><div></div><div></div>
@@ -121,9 +121,12 @@
 
     <script>
     function captchaVerified() {
-  document.getElementById("captcha-gate").style.display = "none";
-  document.getElementById("main-content").style.display = "block";
-  document.getElementById("back-to-top").style.display = "none"; // Start hidden
+      document.getElementById("captcha-gate").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+      const backToTopBtn = document.getElementById("back-to-top");
+      if (backToTopBtn) {
+        backToTopBtn.style.display = "none"; // Start hidden
+      }
     }
 
     function toggleMenu() {
