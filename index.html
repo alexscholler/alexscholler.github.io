@@ -15,7 +15,7 @@
     <div class="g-recaptcha" data-sitekey="6Lf_cB8rAAAAAA4P3EKH5erE3MfBQL5PzQkT-8sr" data-callback="captchaVerified"></div>
   </div>
 
-  <div id="main-content" style="display: none;">
+  <div id="main-content" style="display: block;">
     <nav id="navbar">
       <div class="hamburger" onclick="toggleMenu()">
         <div></div><div></div><div></div>
@@ -115,6 +115,10 @@
     </section>
   </div>
 
+  <button id="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
     <script>
     function captchaVerified() {
   document.getElementById("captcha-gate").style.display = "none";
@@ -152,20 +156,11 @@ window.addEventListener("DOMContentLoaded", () => {
         if (top < windowHeight - 100) {
           el.classList.add("active");
         }
-      const backToTop = document.getElementById("back-to-top");
-        if (
-    window.scrollY > 300 &&
-    document.getElementById("main-content").style.display === "block"
-  ) {
-    backToTop.style.display = "block";
-  } else {
-    backToTop.style.display = "none";
-  }
       });
 
       const backToTop = document.getElementById("back-to-top");
-      if (window.scrollY > 300) {
-        backToTop.style.display = "block";
+      if (window.scrollY > 300 && document.getElementById("main-content").style.display === "block") {
+        backToTop.style.display = "flex";
       } else {
         backToTop.style.display = "none";
       }
