@@ -4,6 +4,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alexandru Scholler | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
@@ -26,14 +28,32 @@
     </nav>
 
 <section class="hero-section">
-  <img src="images/profile_photo.jpg" alt="Alexandru Scholler" class="profile-photo">
-  <h1>Hi, I'm Alexandru Scholler</h1>
-  <p>Software Engineer | Creative Problem Solver | AI Enthusiast</p>
+  <div class="hero-content">
+    <img src="images/profile_photo.jpg" alt="Alexandru Scholler" class="profile-photo">
+    <h1 class="glitch" data-text="Hi, I'm Alexandru Scholler">Hi, I'm Alexandru Scholler</h1>
+    <p class="typing-effect">Software Engineer | Creative Problem Solver | AI Enthusiast</p>
+    <div class="social-links">
+      <a href="https://github.com/alexscholler" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:contact@alexandruscholler.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+    </div>
+    <a href="#about" class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </div>
 </section>
 
 
     <section id="about" class="content-section reveal">
-      <h2>About Me</h2>
+      <h2><i class="fas fa-user-circle"></i> About Me</h2>
+      <div class="skill-badges">
+        <span class="badge"><i class="fab fa-python"></i> Python</span>
+        <span class="badge"><i class="fab fa-java"></i> Java</span>
+        <span class="badge"><i class="fab fa-js"></i> JavaScript</span>
+        <span class="badge"><i class="fab fa-react"></i> React</span>
+        <span class="badge"><i class="fab fa-angular"></i> Angular</span>
+        <span class="badge"><i class="fas fa-brain"></i> AI/ML</span>
+      </div>
       <p>Hello! I’m <strong>Alexandru Scholler</strong>, a passionate and motivated <strong>Software Engineer</strong> with a strong foundation in software development, artificial intelligence, and scalable systems. I recently earned a <em>First-Class Honours degree in Software Engineering</em> from the University of Bolton, where I explored the power of code to solve real-world problems and create meaningful digital experiences.</p>
 
       <p>With hands-on experience in languages like <strong>Python, Java, JavaScript, HTML/CSS, C#</strong>, and frameworks like <strong>React, Angular, and .NET</strong>, I enjoy building clean, functional, and user-focused applications. My academic projects—ranging from AI-powered assistants to full-stack e-commerce platforms—reflect my versatility and enthusiasm for learning new technologies.</p>
@@ -44,20 +64,48 @@
     </section>
 
     <section id="projects" class="projects-section reveal">
-      <h2>Projects</h2>
+      <h2><i class="fas fa-code"></i> Featured Projects</h2>
       <div class="project-grid">
-        <a class="project-tile" href="https://github.com/alexscholler/TechStockAnalysis/tree/main" target="_blank">Tech Stock Analysis in Power BI</a>
-        <a class="project-tile" href="https://github.com/axvampire/stock-price-predictor" target="_blank">Stock Price Predictor</a>
-        <a class="project-tile" href="https://github.com/axvampire/ai-resume-analyzer" target="_blank">AI Resume Analyzer</a>
-        <a class="project-tile" href="https://github.com/alexscholler/DiverGame" target="_blank">Diver Game</a>
-        <a class="project-tile" href="https://github.com/alexscholler/WeatherApp" target="_blank">Weather App</a>
-        <a class="project-tile" href="https://github.com/axvampire/hotel_booking_manipulate_and_visualize_data" target="_blank">Hotel Booking Data Visualization</a>
-        <a class="project-tile" href="https://github.com/axvampire/netflix-content-analysis" target="_blank">Netflix Content Analysis</a>
+        <a class="project-tile" href="https://github.com/alexscholler/TechStockAnalysis/tree/main" target="_blank">
+          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Tech Stock Analysis</h3>
+          <p>Power BI Dashboard</p>
+        </a>
+        <a class="project-tile" href="https://github.com/axvampire/stock-price-predictor" target="_blank">
+          <div class="project-icon"><i class="fas fa-robot"></i></div>
+          <h3>Stock Price Predictor</h3>
+          <p>ML-powered predictions</p>
+        </a>
+        <a class="project-tile" href="https://github.com/axvampire/ai-resume-analyzer" target="_blank">
+          <div class="project-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>AI Resume Analyzer</h3>
+          <p>NLP-based analysis</p>
+        </a>
+        <a class="project-tile" href="https://github.com/alexscholler/DiverGame" target="_blank">
+          <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+          <h3>Diver Game</h3>
+          <p>Interactive gameplay</p>
+        </a>
+        <a class="project-tile" href="https://github.com/alexscholler/WeatherApp" target="_blank">
+          <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
+          <h3>Weather App</h3>
+          <p>Real-time weather data</p>
+        </a>
+        <a class="project-tile" href="https://github.com/axvampire/hotel_booking_manipulate_and_visualize_data" target="_blank">
+          <div class="project-icon"><i class="fas fa-hotel"></i></div>
+          <h3>Hotel Booking Analysis</h3>
+          <p>Data visualization</p>
+        </a>
+        <a class="project-tile" href="https://github.com/axvampire/netflix-content-analysis" target="_blank">
+          <div class="project-icon"><i class="fas fa-tv"></i></div>
+          <h3>Netflix Analysis</h3>
+          <p>Content trends & insights</p>
+        </a>
       </div>
     </section>
 
     <section id="contact" class="contact-section reveal">
-      <h2>Contact Me</h2>
+      <h2><i class="fas fa-envelope-open-text"></i> Get In Touch</h2>
       <form action="https://formspree.io/f/xpwdarky" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
