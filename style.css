@@ -584,21 +584,22 @@ form button:active {
   transform: scale(1.1);
 }
 
-.modal-icon-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  position: absolute;
-  top: -80px;
-  left: 0;
-  z-index: 10001;
-}
-
 .modal-icon {
+  display: block;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center;    /* Centers items horizontally */
+  margin-left: auto;
+  margin-right: auto;
+  margin: auto;
   font-size: 5rem;
+  justify-content: center;
+  margin-bottom: 20px;
   animation: bounce 1s ease infinite;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+  text-align: center;
 }
+
+
 
 .modal-content h3 {
   color: white;
