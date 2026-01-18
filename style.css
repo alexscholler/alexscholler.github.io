@@ -585,10 +585,12 @@ form button:active {
 }
 
 .modal-icon-wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -200px);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: -80px;
+  left: 0;
   z-index: 10001;
 }
 
