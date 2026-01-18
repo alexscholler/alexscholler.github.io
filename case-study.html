@@ -195,36 +195,29 @@
 
       <section class="cs-section">
         <h2><i class="fas fa-images"></i> Screenshots</h2>
+        <p class="screenshots-hint"><i class="fas fa-expand"></i> Click any screenshot to view full size</p>
         <div class="screenshots-grid">
-          <div class="screenshot-card">
-            <div class="screenshot-placeholder">
-              <i class="fas fa-image"></i>
-              <p>Screenshot 1</p>
-            </div>
+          <div class="screenshot-card" onclick="openLightbox('images/screenshot1.jpg', 'Dashboard Overview')">
+            <img src="images/screenshot1.jpg" alt="Dashboard Overview" class="screenshot-img">
+            <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
             <h4>Dashboard Overview</h4>
             <p>Main dashboard displaying active incidents and maintenance requests, designed for quick operational visibility.</p>
           </div>
-          <div class="screenshot-card">
-            <div class="screenshot-placeholder">
-              <i class="fas fa-image"></i>
-              <p>Screenshot 2</p>
-            </div>
+          <div class="screenshot-card" onclick="openLightbox('images/screenshot2.jpg', 'Incident Creation Form')">
+            <img src="images/screenshot2.jpg" alt="Incident Creation Form" class="screenshot-img">
+            <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
             <h4>Incident Creation Form</h4>
             <p>User-friendly form for logging incidents with validation and structured inputs.</p>
           </div>
-          <div class="screenshot-card">
-            <div class="screenshot-placeholder">
-              <i class="fas fa-image"></i>
-              <p>Screenshot 3</p>
-            </div>
+          <div class="screenshot-card" onclick="openLightbox('images/screenshot3.jpg', 'Incident Status Workflow')">
+            <img src="images/screenshot3.jpg" alt="Incident Status Workflow" class="screenshot-img">
+            <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
             <h4>Incident Status Workflow</h4>
             <p>Lifecycle management view showing status transitions from open to resolution.</p>
           </div>
-          <div class="screenshot-card">
-            <div class="screenshot-placeholder">
-              <i class="fas fa-image"></i>
-              <p>Screenshot 4</p>
-            </div>
+          <div class="screenshot-card" onclick="openLightbox('images/screenshot4.jpg', 'Role-Based View')">
+            <img src="images/screenshot4.jpg" alt="Role-Based View" class="screenshot-img">
+            <div class="screenshot-overlay"><i class="fas fa-search-plus"></i></div>
             <h4>Role-Based View</h4>
             <p>Different UI views based on user role (staff vs. resident), enforcing access control.</p>
           </div>
@@ -273,6 +266,13 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox-modal" class="lightbox-modal" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" class="lightbox-content" alt="">
+    <div id="lightbox-caption"></div>
+  </div>
+
   <script>
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("show");
@@ -281,6 +281,30 @@
     function scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    function openLightbox(imageSrc, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      const img = document.getElementById('lightbox-img');
+      const captionText = document.getElementById('lightbox-caption');
+      
+      modal.style.display = 'flex';
+      img.src = imageSrc;
+      captionText.textContent = caption;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    });
 
     window.addEventListener("scroll", function () {
       const backToTop = document.getElementById("back-to-top");
