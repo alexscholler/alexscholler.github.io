@@ -9,13 +9,7 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-  <body>
-  <div id="captcha-gate" class="captcha-gate" style="display: flex;">
-    <h2>Please verify you're human to continue</h2>
-    <div class="g-recaptcha" data-sitekey="6Lf_cB8rAAAAAA4P3EKH5erE3MfBQL5PzQkT-8sr" data-callback="captchaVerified"></div>
-  </div>
-
-  <div id="main-content" style="display: none;">
+  <div id="main-content">
     <nav id="navbar">
       <div class="hamburger" onclick="toggleMenu()">
         <div></div><div></div><div></div>
@@ -50,10 +44,32 @@
         <span class="badge"><i class="fab fa-java"></i> Java</span>
         <span class="badge"><i class="fab fa-js"></i> JavaScript</span>
         <span class="badge"><i class="fab fa-react"></i> React</span>
+        <span class="badge"><i class="fas fa-database"></i> SQL</span>
+        <span class="badge"><i class="fab fa-html5"></i> HTML/CSS</span>
+        <span class="badge"><i class="fas fa-code"></i> C#</span>
+        <span class="badge"><i class="fas fa-book"></i> Jupyter</span>
+        <span class="badge"><i class="fab fa-git-alt"></i> Git</span>
+        <span class="badge"><i class="fab fa-github"></i> GitHub</span>
+        <span class="badge"><i class="fab fa-microsoft"></i> Azure</span>
+        <span class="badge"><i class="fas fa-chart-bar"></i> Power BI</span>
         <span class="badge"><i class="fab fa-angular"></i> Angular</span>
         <span class="badge"><i class="fas fa-brain"></i> AI/ML</span>
+        <span class="badge"><i class="fas fa-tasks"></i> Agile</span>
+        <span class="badge"><i class="fab fa-vscode"></i> VS Code</span>
+        <span class="badge"><i class="fas fa-file-alt"></i> Documentation</span>
+        <span class="badge"><i class="fas fa-bug"></i> Debugging</span>
+        <span class="badge"><i class="fas fa-users"></i> Team Leadership</span>
+        <span class="badge"><i class="fas fa-tools"></i> System Troubleshooting</span>
+        <span class="badge"><i class="fas fa-headset"></i> Customer Support</span>
       </div>
-      <p>Hello! I’m <strong>Alexandru Scholler</strong>, a passionate and motivated <strong>Software Engineer</strong> with a strong foundation in software development, artificial intelligence, and scalable systems. I recently earned a <em>First-Class Honours degree in Software Engineering</em> from the University of Bolton, where I explored the power of code to solve real-world problems and create meaningful digital experiences.</p>
+      <p>Hello, I'm a software engineer, but more importantly, I think in code. For me, programming is more than just what I do at work; it's how I approach challenges, learn new things, and create meaningful solutions. Whether I'm troubleshooting a complex API interaction or polishing a user interface, I like the challenge and the craft.</p>
+
+      <p>I've developed full-stack online applications, data analysis tools, and automation workflows with Python, JavaScript, SQL, and current web technologies. I enjoy transforming messy, real-world needs into tidy, reliable systems.</p>
+
+      <p>This website highlights projects that reflect my interest, attention to detail, and dedication to ongoing improvement. I'm constantly learning, both from code and from the people I work with.</p>
+    </section>
+
+    <section id="projects" class="projects-section reveal"> I’m <strong>Alexandru Scholler</strong>, a passionate and motivated <strong>Software Engineer</strong> with a strong foundation in software development, artificial intelligence, and scalable systems. I recently earned a <em>First-Class Honours degree in Software Engineering</em> from the University of Bolton, where I explored the power of code to solve real-world problems and create meaningful digital experiences.</p>
 
       <p>With hands-on experience in languages like <strong>Python, Java, JavaScript, HTML/CSS, C#</strong>, and frameworks like <strong>React, Angular, and .NET</strong>, I enjoy building clean, functional, and user-focused applications. My academic projects—ranging from AI-powered assistants to full-stack e-commerce platforms—reflect my versatility and enthusiasm for learning new technologies.</p>
 
@@ -120,15 +136,6 @@
   </button>
 
     <script>
-    function captchaVerified() {
-      document.getElementById("captcha-gate").style.display = "none";
-      document.getElementById("main-content").style.display = "block";
-      const backToTopBtn = document.getElementById("back-to-top");
-      if (backToTopBtn) {
-        backToTopBtn.style.display = "none"; // Start hidden
-      }
-    }
-
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("show");
     }
@@ -162,7 +169,7 @@ window.addEventListener("DOMContentLoaded", () => {
       });
 
       const backToTop = document.getElementById("back-to-top");
-      if (window.scrollY > 300 && document.getElementById("main-content").style.display === "block") {
+      if (window.scrollY > 300) {
         backToTop.style.display = "flex";
       } else {
         backToTop.style.display = "none";
