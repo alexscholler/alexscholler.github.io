@@ -39,6 +39,12 @@
 
     <section id="about" class="content-section reveal">
       <h2><i class="fas fa-user-circle"></i> About Me</h2>
+      <p>Hello, I'm a software engineer, but more importantly, I think in code. For me, programming is more than just what I do at work; it's how I approach challenges, learn new things, and create meaningful solutions. Whether I'm troubleshooting a complex API interaction or polishing a user interface, I like the challenge and the craft.</p>
+
+      <p>I've developed full-stack online applications, data analysis tools, and automation workflows with Python, JavaScript, SQL, and current web technologies. I enjoy transforming messy, real-world needs into tidy, reliable systems.</p>
+
+      <p>This website highlights projects that reflect my interest, attention to detail, and dedication to ongoing improvement. I'm constantly learning, both from code and from the people I work with.</p>
+    
       <div class="skill-badges">
         <span class="badge"><i class="fab fa-python"></i> Python</span>
         <span class="badge"><i class="fab fa-java"></i> Java</span>
@@ -62,21 +68,7 @@
         <span class="badge"><i class="fas fa-tools"></i> System Troubleshooting</span>
         <span class="badge"><i class="fas fa-headset"></i> Customer Support</span>
       </div>
-      <p>Hello, I'm a software engineer, but more importantly, I think in code. For me, programming is more than just what I do at work; it's how I approach challenges, learn new things, and create meaningful solutions. Whether I'm troubleshooting a complex API interaction or polishing a user interface, I like the challenge and the craft.</p>
-
-      <p>I've developed full-stack online applications, data analysis tools, and automation workflows with Python, JavaScript, SQL, and current web technologies. I enjoy transforming messy, real-world needs into tidy, reliable systems.</p>
-
-      <p>This website highlights projects that reflect my interest, attention to detail, and dedication to ongoing improvement. I'm constantly learning, both from code and from the people I work with.</p>
-    </section>
-
-    <section id="projects" class="projects-section reveal"> I’m <strong>Alexandru Scholler</strong>, a passionate and motivated <strong>Software Engineer</strong> with a strong foundation in software development, artificial intelligence, and scalable systems. I recently earned a <em>First-Class Honours degree in Software Engineering</em> from the University of Bolton, where I explored the power of code to solve real-world problems and create meaningful digital experiences.</p>
-
-      <p>With hands-on experience in languages like <strong>Python, Java, JavaScript, HTML/CSS, C#</strong>, and frameworks like <strong>React, Angular, and .NET</strong>, I enjoy building clean, functional, and user-focused applications. My academic projects—ranging from AI-powered assistants to full-stack e-commerce platforms—reflect my versatility and enthusiasm for learning new technologies.</p>
-
-      <p>I’m well-versed in <strong>Agile methodologies</strong> (Scrum and Kanban) and value collaboration, continuous improvement, and delivering quality code. Whether I’m designing machine learning models, developing APIs, or fine-tuning a UI for the perfect user experience, I bring a problem-solving mindset and a proactive, curious attitude.</p>
-
-      <p>Before transitioning into software engineering, I worked in tech support and client-facing roles, where I honed my communication, troubleshooting, and organizational skills—an experience that shaped my adaptable, service-oriented approach to development.</p>
-    </section>
+</section>
 
     <section id="projects" class="projects-section reveal">
       <h2><i class="fas fa-code"></i> Featured Projects</h2>
@@ -121,7 +113,7 @@
 
     <section id="contact" class="contact-section reveal">
       <h2><i class="fas fa-envelope-open-text"></i> Get In Touch</h2>
-      <form action="https://formspree.io/f/xpwdarky" method="POST">
+      <form id="contact-form" action="https://formspree.io/f/xpwdarky" method="POST" onsubmit="return validateForm()">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
@@ -136,6 +128,15 @@
   </button>
 
     <script>
+    function validateForm() {
+      const recaptchaResponse = grecaptcha.getResponse();
+      if (recaptchaResponse.length === 0) {
+        alert('Please complete the reCAPTCHA verification before sending your message.');
+        return false;
+      }
+      return true;
+    }
+
     function toggleMenu() {
       document.getElementById("navLinks").classList.toggle("show");
     }
