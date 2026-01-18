@@ -25,6 +25,7 @@ copilot-*.json
 # IDE and Editor Files
 .vscode/
 .idea/
+.vs/
 *.swp
 *.swo
 *~
