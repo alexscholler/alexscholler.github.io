@@ -584,10 +584,18 @@ form button:active {
   transform: scale(1.1);
 }
 
+.modal-icon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -280px);
+  z-index: 10001;
+}
+
 .modal-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size: 5rem;
   animation: bounce 1s ease infinite;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
 }
 
 .modal-content h3 {
