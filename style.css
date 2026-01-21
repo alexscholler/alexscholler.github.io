@@ -231,6 +231,34 @@ body.dark-mode {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+/* CV Download Button */
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  margin: 20px 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  border: 2px solid transparent;
+}
+
+.cv-download-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+.cv-download-btn i {
+  font-size: 1.1rem;
+}
+
 /* Scroll Down Arrow */
 .scroll-down {
   position: absolute;
