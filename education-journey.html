@@ -95,15 +95,19 @@
         <p>I'm always interested in discussing technology, sharing knowledge, or exploring collaboration opportunities.</p>
         <div class="cta-buttons">
           <a href="index.html#contact" class="case-study-btn">
-            <i class="fas fa-envelope"></i> Get in Touch
+            <i class="fas fa-envelope"></i>  Get in Touch
           </a>
-          <a href="docs/CV_2026_Alexandru-Scholler-Software Developer.pdf" download class="case-study-btn secondary">
-            <i class="fas fa-download"></i> Download CV
+          <a href="#" onclick="openCVPreview(); return false;" class="case-study-btn secondary">
+            <i class="fas fa-file-alt"></i> View CV
           </a>
         </div>
       </section>
     </div>
   </div>
+
+  <button id="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <footer>
     <p>&copy; 2026 Alexandru Scholler. All rights reserved.</p>
@@ -113,11 +117,67 @@
     </div>
   </footer>
 
+  <!-- CV Preview Modal -->
+  <div id="cvPreviewModal" class="cv-modal">
+    <div class="cv-modal-content">
+      <span class="cv-modal-close" onclick="closeCVPreview()">&times;</span>
+      <div class="cv-modal-header">
+        <h2><i class="fas fa-file-alt"></i> Curriculum Vitae</h2>
+        <div class="cv-modal-actions">
+          <a href="docs/CV_2026_Alexandru-Scholler-Software Developer.pdf" download class="cv-action-btn download-btn">
+            <i class="fas fa-download"></i> Download
+          </a>
+          <button onclick="printCV()" class="cv-action-btn print-btn">
+            <i class="fas fa-print"></i> Print
+          </button>
+        </div>
+      </div>
+      <div class="cv-preview-container">
+        <iframe id="cvIframe" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openCVPreview() {
+      const modal = document.getElementById('cvPreviewModal');
+      const iframe = document.getElementById('cvIframe');
+      iframe.src = 'docs/CV_2026_Alexandru-Scholler-Software Developer.pdf';
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCVPreview() {
+      const modal = document.getElementById('cvPreviewModal');
+      const iframe = document.getElementById('cvIframe');
+      modal.style.display = 'none';
+      iframe.src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    function printCV() {
+      const iframe = document.getElementById('cvIframe');
+      iframe.contentWindow.print();
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById('cvPreviewModal');
+      if (event.target === modal) {
+        closeCVPreview();
+      }
+    }
+  </script>
+
   <script src="script.js"></script>
   <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     function toggleMenu() {
       const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
+      navLinks.classList.toggle('show');
     }
 
     // Close menu when clicking outside
@@ -125,7 +185,17 @@
       const navbar = document.getElementById('navbar');
       const navLinks = document.getElementById('navLinks');
       if (!navbar.contains(event.target)) {
-        navLinks.classList.remove('active');
+        navLinks.classList.remove('show');
+      }
+    });
+
+    // Show/hide back to top button
+    window.addEventListener('scroll', function() {
+      const backToTop = document.getElementById('back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'flex';
+      } else {
+        backToTop.style.display = 'none';
       }
     });
   </script>

@@ -31,8 +31,8 @@
       <a href="https://github.com/alexscholler" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/alexandru-s-556003195/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
     </div>
-    <a href="docs/CV_2026_Alexandru-Scholler-Software Developer.pdf" download class="cv-download-btn">
-      <i class="fas fa-download"></i> Download CV
+    <a href="#" onclick="openCVPreview(); return false;" class="cv-download-btn">
+      <i class="fas fa-file-alt"></i> View CV
     </a>
     <a href="#about" class="scroll-down">
       <i class="fas fa-chevron-down"></i>
@@ -211,9 +211,65 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   </script>
 
-  <footer class="site-footer">
+  <footer>
     <p>&copy; 2026 Alexandru Scholler. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://github.com/alexscholler" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/alexandru-s-556003195/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
   </footer>
+
+  <!-- CV Preview Modal -->
+  <div id="cvPreviewModal" class="cv-modal">
+    <div class="cv-modal-content">
+      <span class="cv-modal-close" onclick="closeCVPreview()">&times;</span>
+      <div class="cv-modal-header">
+        <h2><i class="fas fa-file-alt"></i> Curriculum Vitae</h2>
+        <div class="cv-modal-actions">
+          <a href="docs/CV_2026_Alexandru-Scholler-Software Developer.pdf" download class="cv-action-btn download-btn">
+            <i class="fas fa-download"></i> Download
+          </a>
+          <button onclick="printCV()" class="cv-action-btn print-btn">
+            <i class="fas fa-print"></i> Print
+          </button>
+        </div>
+      </div>
+      <div class="cv-preview-container">
+        <iframe id="cvIframe" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openCVPreview() {
+      const modal = document.getElementById('cvPreviewModal');
+      const iframe = document.getElementById('cvIframe');
+      iframe.src = 'docs/CV_2026_Alexandru-Scholler-Software Developer.pdf';
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCVPreview() {
+      const modal = document.getElementById('cvPreviewModal');
+      const iframe = document.getElementById('cvIframe');
+      modal.style.display = 'none';
+      iframe.src = '';
+      document.body.style.overflow = 'auto';
+    }
+
+    function printCV() {
+      const iframe = document.getElementById('cvIframe');
+      iframe.contentWindow.print();
+    }
+
+    // Close modal when clicking outside
+    document.addEventListener('click', function(event) {
+      const modal = document.getElementById('cvPreviewModal');
+      if (event.target === modal) {
+        closeCVPreview();
+      }
+    });
+  </script>
 </body>
 
 
