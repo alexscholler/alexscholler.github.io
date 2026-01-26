@@ -241,12 +241,12 @@ body.dark-mode {
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 25px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-  border: 2px solid transparent;
+  border: 0.1px solid rgba(255, 255, 255);
 }
 
 .cv-download-btn:hover {
@@ -525,7 +525,9 @@ form button:active {
   }
 
   .cv-download-btn {
-    margin-bottom: 60px;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    margin: 15px 0 40px 0;
   }
 
   .content-section h2, .projects-section h2, .contact-section h2 {
