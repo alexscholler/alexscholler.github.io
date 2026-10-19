@@ -26,7 +26,9 @@ Visit the live site at: [alexscholler.github.io](https://alexscholler.github.io)
 ```
 alexscholler.github.io/
 ├── index.html          # Main portfolio page
-├── case-study.html     # Detailed project case study
+├── handovr.html        # Handovr product page (eQualsFortyTwo Ltd)
+├── case-study.html     # Early Handovr prototype case study
+├── education-journey.html # Education timeline
 ├── style.css           # All styles and responsive design
 ├── images/             # Image assets
 └── README.md           # This file
@@ -36,8 +38,9 @@ alexscholler.github.io/
 
 1. **Hero Section**: Introduction with profile photo and social links
 2. **About Me**: Background, skills, and expertise
-3. **Featured Projects**: Showcase of technical projects with links
-4. **Contact**: Professional contact information and form
+3. **My Company**: eQualsFortyTwo Ltd and its product, Handovr
+4. **Featured Projects**: Showcase of technical projects with links
+5. **Contact**: Professional contact information and form
 
 ## 📱 Responsive Breakpoints
 

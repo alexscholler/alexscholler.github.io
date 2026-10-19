@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handovr: Building Management Platform | Alexandru Scholler</title>
+  <meta name="description" content="Handovr is a residential building management platform built by Alexandru Scholler at eQualsFortyTwo Ltd." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+  <nav id="navbar">
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div><div></div><div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#company">Company</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="education-journey.html">Education</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="case-study-container">
+    <div class="case-study-header">
+      <a href="index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+      <h1>Handovr</h1>
+      <p class="subtitle">Every building. Every resident. One handover.</p>
+      <div class="status-badge live">
+        <i class="fas fa-circle"></i> Live Product &middot; eQualsFortyTwo Ltd
+      </div>
+      <div class="cta-buttons">
+        <a href="https://demo.handovr.uk" target="_blank" rel="noopener" class="case-study-btn">
+          Visit demo.handovr.uk <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="case-study.html" class="case-study-btn secondary">
+          See the Original Prototype <i class="fas fa-history"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="case-study-content">
+      <section class="cs-section">
+        <h2><i class="fas fa-info-circle"></i> Overview</h2>
+        <p>Handovr is a residential building management platform that I designed and built as founder and director of <strong>eQualsFortyTwo Ltd</strong>. It connects management, concierge teams and residents in one system and follows every issue from the first report to the final sign-off.</p>
+        <p>It started as a small incident-tracking prototype (my earlier <a href="case-study.html">Residential Management System</a> case study) and grew into a commercial, multi-client product used to run day-to-day building operations.</p>
+      </section>
+
+      <section class="cs-section">
+        <h2><i class="fas fa-question-circle"></i> The Problem</h2>
+        <p>Residential buildings are still often run on emails, spreadsheets, paper logbooks and WhatsApp groups. Concierge teams pass information along by word of mouth at shift change, residents can't see what is happening with their issue, and managers have little visibility of compliance deadlines or missed inspections.</p>
+        <ul class="impact-list">
+          <li><i class="fas fa-clock"></i> Slow, untracked responses to maintenance issues</li>
+          <li><i class="fas fa-times-circle"></i> Information lost between shifts and teams</li>
+          <li><i class="fas fa-file-excel"></i> Compliance certificates tracked in spreadsheets and missed</li>
+          <li><i class="fas fa-key"></i> No reliable record of who held which keys, and when</li>
+        </ul>
+      </section>
+
+      <section class="cs-section">
+        <h2><i class="fas fa-users"></i> Three Portals, One System</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Management</h3>
+            <p>Directors, property and development managers get portfolio oversight: executive dashboard, compliance tracker with expiry reminders, approvals and audit history.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-concierge-bell"></i>
+            <h3>Operations &amp; Concierge</h3>
+            <p>Front-line staff handle handovers, deliveries, keys, defects, inspections, incidents and facility bookings on desktop or mobile.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-home"></i>
+            <h3>Residents</h3>
+            <p>Tenants, owners, managing agents and private assistants report issues, approve access, book facilities and servicing slots, and follow building news.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2><i class="fas fa-star"></i> Key Modules</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <i class="fas fa-tools"></i>
+            <h3>Maintenance</h3>
+            <p>Seven-step workflow: report with photos, occupier approval, management review, contractor assignment, key access, full action log, archive and export.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-clipboard-check"></i>
+            <h3>Inspections</h3>
+            <p>Mobile checklists on daily, weekly, monthly or yearly schedules, with photo evidence, severity ratings and automatic linked defects. Missed rounds are visible.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Servicing &amp; Bookings</h3>
+            <p>Building-wide servicing campaigns (FCU, HIU, fire doors) with resident slot booking, plus facility bookings for pools, gyms, saunas and cinemas.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-key"></i>
+            <h3>Keys &amp; Access</h3>
+            <p>Key set register, one-off or recurring collection arrangements, occupier approval, and per-key collection and return logs.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>GeoTrack</h3>
+            <p>Staff clock in and out with location and time, hours reporting and CSV export. Privacy-first: location saved only on action, logs auto-deleted after 12 months.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Compliance</h3>
+            <p>Dashboard for Gas Safety, EICR, EPC, Fire Risk Assessments and more, with expiry reminders so nothing lapses.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-box"></i>
+            <h3>Deliveries</h3>
+            <p>Barcode registration of parcels with automatic email notifications to residents.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>Shift Handover &amp; Incidents</h3>
+            <p>Structured shift handover logs and guided incident reports generated as Word documents.</p>
+          </div>
+          <div class="feature-card">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Community &amp; Records</h3>
+            <p>Announcements and polls, searchable documents hub, unified calendar, contractor and resident directories, Excel exports.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2><i class="fas fa-lock"></i> Security &amp; Data Protection</h2>
+        <p>Because Handovr holds residents' personal data across multiple client buildings, security was designed in from the start and built with UK GDPR in mind.</p>
+        <ul class="solution-list">
+          <li><i class="fas fa-check-circle"></i> Two-factor sign-in (authenticator app or emailed codes) with backup codes and lockout protection</li>
+          <li><i class="fas fa-check-circle"></i> Strict data separation between clients and granular role permissions</li>
+          <li><i class="fas fa-check-circle"></i> Searchable audit trail of every action</li>
+          <li><i class="fas fa-check-circle"></i> Self-service data export and managed erasure with approval</li>
+          <li><i class="fas fa-check-circle"></i> Automatic daily backups</li>
+        </ul>
+      </section>
+
+      <section class="cs-section">
+        <h2><i class="fas fa-road"></i> From Prototype to Product</h2>
+        <div class="evolution-timeline">
+          <div class="evolution-step">
+            <h4>1. Residential Management System (prototype)</h4>
+            <p>A focused incident-tracking web app with role-based access and an Open → In Progress → Resolved workflow, built to prove the idea against real operational needs.</p>
+            <p><a href="case-study.html">Read the original case study <i class="fas fa-arrow-right"></i></a></p>
+          </div>
+          <div class="evolution-step">
+            <h4>2. eQualsFortyTwo Ltd</h4>
+            <p>I incorporated eQualsFortyTwo Ltd to take the project from a personal build to a commercial product.</p>
+          </div>
+          <div class="evolution-step">
+            <h4>3. Handovr</h4>
+            <p>The prototype grew into a full platform: three portals, multi-client separation, maintenance, inspections, keys, servicing campaigns, compliance, deliveries, GeoTrack and more.</p>
+          </div>
+          <div class="evolution-step">
+            <h4>Next</h4>
+            <p>Paxton access-control integration and <strong>Ask Alex</strong>, an AI assistant for building teams, are on the roadmap.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cs-section">
+        <h2><i class="fas fa-graduation-cap"></i> What This Project Demonstrates</h2>
+        <ul class="demonstration-list">
+          <li><i class="fas fa-rocket"></i> Taking a product from prototype to a live commercial platform</li>
+          <li><i class="fas fa-layer-group"></i> End-to-end full-stack engineering across many interconnected modules</li>
+          <li><i class="fas fa-user-shield"></i> Designing multi-client, role-based systems with security and GDPR in mind</li>
+          <li><i class="fas fa-mobile-alt"></i> Building mobile-friendly tools for front-line staff</li>
+          <li><i class="fas fa-briefcase"></i> Running a company: product, customers and delivery</li>
+        </ul>
+      </section>
+
+      <section class="cs-section access-section">
+        <h2><i class="fas fa-key"></i> See It in Action</h2>
+        <div class="access-info">
+          <div class="access-item">
+            <i class="fas fa-globe"></i>
+            <h4>Product Site</h4>
+            <p><a href="https://demo.handovr.uk" target="_blank" rel="noopener">demo.handovr.uk</a></p>
+          </div>
+          <div class="access-item">
+            <i class="fas fa-video"></i>
+            <h4>Live Demo</h4>
+            <p>30-minute tailored demo, bookable from the product site</p>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <p>Want to talk about Handovr or working together?</p>
+          <a href="index.html#contact" class="cta-button">Get in Touch</a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <button id="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener("scroll", function () {
+      const backToTop = document.getElementById("back-to-top");
+      if (window.scrollY > 300) {
+        backToTop.style.display = "flex";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+  </script>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Alexandru Scholler. All rights reserved. Handovr is a product of eQualsFortyTwo Ltd.</p>
+    <div class="footer-links">
+      <a href="https://github.com/alexscholler" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/alexandru-s-556003195/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+</body>
+</html>
